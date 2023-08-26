@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
-      "Utils/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Utils.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Utils.dll": {}
-        }
-      }
-    }
+    "net6.0": {}
   },
-  "libraries": {
-    "Utils/1.0.0": {
-      "type": "project",
-      "path": "../Utils/Utils.csproj",
-      "msbuildProject": "../Utils/Utils.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "Utils >= 1.0.0"
-    ]
+    "net6.0": []
   },
   "packageFolders": {
     "C:\\Users\\MI PC\\.nuget\\packages\\": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj",
-      "projectName": "Domain",
-      "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj",
+      "projectUniqueName": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj",
+      "projectName": "Utils",
+      "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj",
       "packagesPath": "C:\\Users\\MI PC\\.nuget\\packages\\",
-      "outputPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\obj\\",
+      "outputPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MI PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,11 +33,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj": {
-              "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

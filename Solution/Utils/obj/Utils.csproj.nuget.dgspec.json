@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\WebApp.csproj": {}
+    "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj": {}
   },
   "projects": {
-    "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\WebApp.csproj": {
+    "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\WebApp.csproj",
-        "projectName": "WebApp",
-        "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj",
+        "projectName": "Utils",
+        "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\Utils.csproj",
         "packagesPath": "C:\\Users\\MI PC\\.nuget\\packages\\",
-        "outputPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\obj\\",
+        "outputPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Utils\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MI PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,9 +51,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
