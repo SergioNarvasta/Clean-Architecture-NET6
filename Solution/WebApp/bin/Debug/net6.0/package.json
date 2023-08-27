@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "datatables.net-bs4": "^1.13.6",
+    "toastr": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  }
+}

@@ -16,7 +16,6 @@ namespace Infraestructure.Services
         public async Task<List<Usuario>> GetList()
         {
            return await _appDbContext.Usuarios
-                .Where(x => x.Estado == Utils.Enums.Estados.Active)
                 .AsNoTracking()
                 .ToListAsync();
         }
@@ -29,26 +28,60 @@ namespace Infraestructure.Services
                  .FirstAsync();
         }
 
-        public async Task Create(Usuario usuario)
+        public async Task<bool> Create(Usuario usuario)
         {
-            await _appDbContext.Usuarios.AddAsync(usuario);
-            await _appDbContext.SaveChangesAsync();
+            try
+            {
+                await _appDbContext.Usuarios.AddAsync(usuario);
+                await _appDbContext.SaveChangesAsync();
+                return true; 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {ex.Message}");
+                return false;
+            }
         }
 
-        public async Task Update(Usuario usuario)
+        public async Task<bool> Update(Usuario usuario)
         {
-             _appDbContext.Usuarios.Update(usuario);
-            await _appDbContext.SaveChangesAsync();
-
+            try
+            {
+                _appDbContext.Usuarios.Update(usuario);
+                await _appDbContext.SaveChangesAsync();
+                return true; 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {ex.Message}");
+                return false;
+            }
         }
 
-        public async Task Delete(int usuarioId)
+        public async Task<bool> Delete(int usuarioId)
         {
-            await _appDbContext.Usuarios
-                .Where(x => x.Id == usuarioId)
-                .AsNoTracking()
-                .ExecuteDeleteAsync();
+            try
+            {
+                var usuario = await _appDbContext.Usuarios.FirstOrDefaultAsync(x => x.Id == usuarioId);
+
+                if (usuario != null)
+                {
+                    _appDbContext.Usuarios.Remove(usuario);
+                    await _appDbContext.SaveChangesAsync();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
+            }
         }
+
 
     }
 }

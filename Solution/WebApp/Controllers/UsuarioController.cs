@@ -1,6 +1,8 @@
 ﻿using Application.Interfaces;
+using Azure;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace WebApp.Controllers
 {
@@ -31,21 +33,24 @@ namespace WebApp.Controllers
         }
 
         [HttpPost]
-        public async Task Create(Usuario usuario)
+        public async Task<JsonResult> Create(Usuario usuario)
         {
-             await _usuarioService.Create(usuario);
+            var response =  await _usuarioService.Create(usuario);
+            return Json(response);
         }
 
         [HttpPost]
-        public async Task Update(Usuario usuario)
+        public async Task<JsonResult> Update(Usuario usuario)
         {
-            await _usuarioService.Update(usuario);
+            var response = await _usuarioService.Update(usuario);
+            return Json(response);
         }
 
         [HttpPost]
-        public async Task Delete(int usuarioId)
+        public async Task<JsonResult> Delete(int usuarioId)
         {
-            await _usuarioService.Delete(usuarioId);
+            var response = await _usuarioService.Delete(usuarioId);
+            return Json(response);
         }
 
     }

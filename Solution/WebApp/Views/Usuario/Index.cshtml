@@ -1,14 +1,6 @@
-﻿<!-- DataTables -->
-<link href="~/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-<link href="~/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
-<!-- Select datatable -->
-<link href="~/assets/libs/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
-<!-- Responsive datatable -->
-<link href="~/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
-
+﻿
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -17,7 +9,7 @@
                     <div class="col-md-12">
                         <div class="d-flex flex-wrap gap-2">
                             <h4 class="card-title mt-2 me-5"><b>Gestion de Usuarios</b> </h4>
-                            <a id="btnShowCreateModal" class="btn btn-outline-primary btn-md"><i class="fas fa-plus"></i> Agregar usuario</a>
+                            <a id="btnShowCreateModal" style="height:40px" class="btn btn-outline-primary btn-md"><i class="fas fa-plus"></i> Agregar usuario</a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +50,7 @@
                     <div>
                         <div>
                             <div>
-                                <input type="text" id="RateId" hidden />
+                                <input type="text" id="UsuarioId" hidden />
                             </div>
                             <div class="d-flex flex-row">
                                 <label style="font-weight:bold; width:140px">Nombres:</label>
@@ -73,7 +65,7 @@
                                 <input type="text" class="form-control" id="DNI" />
                             </div><br />
                             <div class="d-flex flex-row">
-                                <label style="font-weight: bold; width: 100px">Fecha de Nacimiento:</label>
+                                <label style="font-weight: bold; width: 140px">FechaNac:</label>
                                 <input type="date" class="form-control" id="FechaNac" />
                             </div><br />
                             <div class="d-flex flex-row">
@@ -98,22 +90,28 @@
     </div>
 </div>
 
-<script src="~/assets/libs/jquery/jquery.min.js"></script>
-<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="~/assets/libs/metismenu/metisMenu.min.js"></script>
-<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
-<script src="~/assets/libs/node-waves/waves.min.js"></script>
+<div class="modal fade modal-static" id="deleteEventModal" tabindex="-1" role="dialog" aria-labelledby="deleteEventModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Eliminar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="DeleteId" hidden />
+                <div class="mt-2">
+                    <label>¿ Estas seguro de eliminar el usuario seleccionada ? </label><br />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-md" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary btn-md" id="btndeleteEvent">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-<!-- Required datatable js -->
-<script src="~/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="~/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-
-<!-- Responsive examples -->
-<script src="~/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="~/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-<!-- Datatable init js -->
-<script src="~/assets/js/pages/datatables.init.js"></script>
-
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="~/js/usuario.js"></script>
 

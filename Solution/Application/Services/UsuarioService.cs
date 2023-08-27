@@ -22,19 +22,19 @@ namespace Application.Services
            return await _usuarioRepository.GetById(usuarioId);
         }
 
-        public async Task Create(Usuario usuario)
+        public async Task<bool> Create(Usuario usuario)
         {
-            await _usuarioRepository.Create(usuario);
+            return await _usuarioRepository.Create(usuario);
         }
 
-        public async Task Update(Usuario usuario)
+        public async Task<bool> Update(Usuario usuario)
         {
-            await _usuarioRepository.Update(usuario);
+            return await _usuarioRepository.Update(usuario);
         }
 
-        public async Task Delete(int usuarioId)
+        public async Task<bool> Delete(int usuarioId)
         {
-            await _usuarioRepository.Delete(usuarioId);
+            return await _usuarioRepository.Delete(usuarioId);
         }
 
     }

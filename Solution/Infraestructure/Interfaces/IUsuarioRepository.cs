@@ -5,10 +5,10 @@ namespace Infraestructure.Interfaces
 {
     public interface IUsuarioRepository
     {
-        Task Create(Usuario usuario);
-        Task Delete(int usuarioId);
+        Task<bool> Create(Usuario usuario);
+        Task<bool> Delete(int usuarioId);
         Task<Usuario> GetById(int usuarioId);
         Task<List<Usuario>> GetList();
-        Task Update(Usuario usuario);
+        Task<bool> Update(Usuario usuario);
     }
 }

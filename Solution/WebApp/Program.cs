@@ -1,4 +1,8 @@
+using Application.Interfaces;
+using Application.Services;
 using Infraestructure.Data;
+using Infraestructure.Interfaces;
+using Infraestructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +13,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+builder.Services.AddTransient<IUsuarioService, UsuarioService>();
 
 var app = builder.Build();
 
