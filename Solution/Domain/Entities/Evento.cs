@@ -22,7 +22,9 @@ namespace Domain.Entities {
         public int NroComisarios { get; set; }
         [DefaultValue(Estados.Active)]
         public Estados Estado { get; set; }
+
         public int ComplejoDeportivoId { get; set; }
+        [ForeignKey("ComplejoDeportivoId")]
         public ComplejoDeportivo ComplejoDeportivo { get; set; }
     }
 }

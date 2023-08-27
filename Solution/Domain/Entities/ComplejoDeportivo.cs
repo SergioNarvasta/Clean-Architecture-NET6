@@ -15,16 +15,17 @@ namespace Domain.Entities
        public string Nombre { get; set; }
        [Required]
        public string Localizacion { get; set; }
-       [Required]
-       public int SedeOlimpicaId { get; set; }
-       public SedeOlimpica SedeOlimpica { get; set; }
 
         [DefaultValue(Estados.Active)]
         public Estados Estado { get; set; }
 
-       [Required]
-       public int UsuarioId { get; set; }
-       public Usuario Usuario { get; set; }
+        [Required]
+       public int SedeOlimpicaId { get; set; }
+
+        [ForeignKey("SedeOlimpicaId")]
+        public SedeOlimpica? SedeOlimpica { get; set; }
+
+       public Usuario? Usuario { get; set; }
        
     }
 }

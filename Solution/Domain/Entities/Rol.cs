@@ -11,11 +11,14 @@ namespace Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+        [Required]
         public string Nombre { get; set; }
         [DefaultValue(Estados.Active)]
         public Estados Estado { get; set; }
-        public int UsuarioId { get; set; }
 
-        public Usuario Usuario { get; set; }
+        [Required]
+        public int UsuarioId { get; set; }
+        [ForeignKey("UsuarioId")]
+        public Usuario? Usuario { get; set; }
     }
 }

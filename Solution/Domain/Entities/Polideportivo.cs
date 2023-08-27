@@ -31,7 +31,8 @@ namespace Domain.Entities
 
         [Required]
         public int ComplejoDeportivoId { get; set; }
-        public ComplejoDeportivo ComplejoDeportivo { get; set; }
+        [ForeignKey("ComplejoDeportivoId")]
+        public ComplejoDeportivo? ComplejoDeportivo { get; set; }
     }
 
 }

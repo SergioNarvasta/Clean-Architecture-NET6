@@ -17,7 +17,7 @@ namespace Domain.Entities
         
         [Required]
         public int UsuarioId { get; set; }
-
-        public Usuario UsuarioAsoc { get; set; }
+        [ForeignKey("UsuarioId")]
+        public Usuario? UsuarioAsoc { get; set; }
     }
 }
