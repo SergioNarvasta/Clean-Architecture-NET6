@@ -5,6 +5,12 @@ namespace Infraestructure.Data
 {
     public class AppDbContext : DbContext
     {
+        /*
+         Add-Migration -Context Infraestructure.Data.AppDbContext -name init_01
+         Update-Database -Verbose -Context AppDbContext
+         
+         Remove-Migration -Context AppDbContext
+       */
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {

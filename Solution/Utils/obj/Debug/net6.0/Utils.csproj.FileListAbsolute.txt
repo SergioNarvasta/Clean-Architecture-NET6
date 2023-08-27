@@ -1,0 +1,12 @@
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\bin\Debug\net6.0\Utils.deps.json
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\bin\Debug\net6.0\Utils.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\bin\Debug\net6.0\Utils.pdb
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\Utils.csproj.AssemblyReference.cache
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\Utils.GeneratedMSBuildEditorConfig.editorconfig
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\Utils.AssemblyInfoInputs.cache
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\Utils.AssemblyInfo.cs
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\Utils.csproj.CoreCompileInputs.cache
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\Utils.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\refint\Utils.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\Utils.pdb
+F:\3.PROYECTOS\EvTecnica\Solution\Utils\obj\Debug\net6.0\ref\Utils.dll

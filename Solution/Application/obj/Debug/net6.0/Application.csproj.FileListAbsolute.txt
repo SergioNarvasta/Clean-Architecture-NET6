@@ -1,0 +1,17 @@
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Application.deps.json
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Application.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Application.pdb
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Domain.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Utils.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Domain.pdb
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Utils.pdb
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\refint\Application.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.pdb
+F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\ref\Application.dll

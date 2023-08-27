@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using static Utils.Enum.Enums;
+using static Utils.Enums;
 using System.ComponentModel;
 
 namespace Domain.Entities

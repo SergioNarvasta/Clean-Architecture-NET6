@@ -2,9 +2,10 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static Utils.Enum.Enums;
+using static Utils.Enums;
 
-namespace Domain.Entities {
+namespace Domain.Entities
+{
     public class Evento
     {
         [Key]
