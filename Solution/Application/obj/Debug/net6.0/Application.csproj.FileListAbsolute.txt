@@ -15,3 +15,5 @@ F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.dll
 F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\refint\Application.dll
 F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\Application.pdb
 F:\3.PROYECTOS\EvTecnica\Solution\Application\obj\Debug\net6.0\ref\Application.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Infraestructure.dll
+F:\3.PROYECTOS\EvTecnica\Solution\Application\bin\Debug\net6.0\Infraestructure.pdb

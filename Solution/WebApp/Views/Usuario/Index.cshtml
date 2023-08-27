@@ -1,0 +1,119 @@
+﻿<!-- DataTables -->
+<link href="~/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+<link href="~/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+<!-- Select datatable -->
+<link href="~/assets/libs/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+<!-- Responsive datatable -->
+<link href="~/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex flex-wrap gap-2">
+                            <h4 class="card-title mt-2 me-5"><b>Gestion de Usuarios</b> </h4>
+                            <a id="btnShowCreateModal" class="btn btn-outline-primary btn-md"><i class="fas fa-plus"></i> Agregar usuario</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered dt-responsive nowrap w-100" id="usuariosTable">
+                    <thead>
+                        <tr>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>DNI</th>
+                            <th>FechaNac</th>
+                            <th>Estado</th>                           
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade modal-static" id="createEventModal" tabindex="-1" role="dialog" aria-labelledby="createEventModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title titleModalRate"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <input type="text" id="RateId" hidden />
+                            </div>
+                            <div class="d-flex flex-row">
+                                <label style="font-weight:bold; width:140px">Nombres:</label>
+                                <input type="text" class="form-control required" id="Nombres" />
+                            </div><br />   
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">Apellidos:</label>
+                                <input type="text" class="required form-control" id="Apellidos" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">DNI:</label>
+                                <input type="text" class="form-control" id="DNI" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 100px">Fecha de Nacimiento:</label>
+                                <input type="date" class="form-control" id="FechaNac" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">Estado:</label>
+                                <select class="form-select form-select-sm required" id="cboEstado">
+                                    <option value="1">Activo</option>
+                                    <option value="0">Inactivo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div><br />
+
+                </div>
+                <p id="messageError" style="color:red" hidden></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-md" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary btn-md" id="btnCreateEvent">Registrar</button>
+                <button type="button" class="btn btn-primary btn-md" id="btnUpdateEvent">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/assets/libs/jquery/jquery.min.js"></script>
+<script src="~/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+<script src="~/assets/libs/node-waves/waves.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="~/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="~/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+
+<!-- Responsive examples -->
+<script src="~/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="~/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+<!-- Datatable init js -->
+<script src="~/assets/js/pages/datatables.init.js"></script>
+
+<script src="~/js/usuario.js"></script>
+

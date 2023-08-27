@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jaY52WdV7dC6hhInZRcET9Y8c9g+GRYUpihwomD0iww=",
+  "Hash": "7JN0Xpa1VlycD4HZ7U1rIIKbyvFsmZCp3YpQowQPwGQ=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\js\\usuario.js",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "js/usuario.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\usuario.js"
     },
     {
       "Identity": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

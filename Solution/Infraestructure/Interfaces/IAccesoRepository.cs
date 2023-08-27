@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Dto;
+using Domain.Entities;
 
 namespace Infraestructure.Interfaces
 {
     public interface IAccesoRepository
     {
+        Task<Acceso> IniciarSesion(AccesoDto acceso);
     }
 }

@@ -22,9 +22,9 @@ namespace Domain.Entities
         [DefaultValue(Estados.Active)]
         public Estados Estado { get; set; }
 
-        public int EventoId { get; set; }
+        public int? EventoId { get; set; }
         [ForeignKey("EventoId")]
-        public Evento Evento { get; set; }
+        public Evento? Evento { get; set; }
 
         [ForeignKey("ComplejoDeportivo")] 
         public int? ComplejoDeportivoId { get; set; }

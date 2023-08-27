@@ -30,6 +30,9 @@
             "projectReferences": {
               "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj": {
                 "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj"
+              },
+              "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Infraestructure\\Infraestructure.csproj": {
+                "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Infraestructure\\Infraestructure.csproj"
               }
             }
           }
@@ -146,9 +149,6 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj": {
-                "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj"
-              },
               "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj": {
                 "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj"
               },
@@ -289,8 +289,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Infraestructure\\Infraestructure.csproj": {
-                "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Infraestructure\\Infraestructure.csproj"
+              "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj": {
+                "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj"
               }
             }
           }

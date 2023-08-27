@@ -2,10 +2,8 @@ F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Infraestructu
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Infraestructure.runtimeconfig.json
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Infraestructure.dll
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Infraestructure.pdb
-F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Application.dll
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Domain.dll
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Utils.dll
-F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Application.pdb
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Domain.pdb
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\bin\Debug\net6.0\Utils.pdb
 F:\3.PROYECTOS\EvTecnica\Solution\Infraestructure\obj\Debug\net6.0\Infraestructure.csproj.AssemblyReference.cache

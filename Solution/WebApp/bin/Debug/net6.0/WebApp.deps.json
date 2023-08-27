@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "WebApp/1.0.0": {
         "dependencies": {
-          "Infraestructure": "1.0.0",
+          "Application": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.10"
         },
         "runtime": {
@@ -695,7 +695,8 @@
       },
       "Application/1.0.0": {
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "Infraestructure": "1.0.0"
         },
         "runtime": {
           "Application.dll": {}
@@ -711,7 +712,6 @@
       },
       "Infraestructure/1.0.0": {
         "dependencies": {
-          "Application": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",

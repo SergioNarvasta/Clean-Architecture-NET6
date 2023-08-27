@@ -1156,19 +1156,6 @@
           }
         }
       },
-      "Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Application.dll": {}
-        }
-      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3537,11 +3524,6 @@
         "version.txt"
       ]
     },
-    "Application/1.0.0": {
-      "type": "project",
-      "path": "../Application/Application.csproj",
-      "msbuildProject": "../Application/Application.csproj"
-    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -3555,7 +3537,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Application >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10",
@@ -3591,9 +3572,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj": {
-              "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj"
-            },
             "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj": {
               "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Domain\\Domain.csproj"
             },

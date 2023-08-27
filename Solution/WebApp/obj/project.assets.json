@@ -1148,7 +1148,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "Infraestructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -1174,7 +1175,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Application": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
@@ -3540,7 +3540,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Infraestructure >= 1.0.0",
+      "Application >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10"
     ]
   },
@@ -3572,8 +3572,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Infraestructure\\Infraestructure.csproj": {
-              "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Infraestructure\\Infraestructure.csproj"
+            "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj": {
+              "projectPath": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\Application\\Application.csproj"
             }
           }
         }
