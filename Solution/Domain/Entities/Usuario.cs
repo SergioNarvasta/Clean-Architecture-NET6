@@ -22,13 +22,13 @@ namespace Domain.Entities
         [DefaultValue(Estados.Active)]
         public Estados Estado { get; set; }
 
-        public int? EventoId { get; set; }
-        [ForeignKey("EventoId")]
-        public Evento? Evento { get; set; }
-
         [ForeignKey("ComplejoDeportivo")] 
         public int? ComplejoDeportivoId { get; set; }
         public ComplejoDeportivo? ComplejoDeportivo { get; set; }
+
+        [ForeignKey("RolId")]
+        public int? RolId { get; set; }
+        public Rol? Rol { get; set; }
     }
 }
 

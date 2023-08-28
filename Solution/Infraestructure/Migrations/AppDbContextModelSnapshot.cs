@@ -194,7 +194,7 @@ namespace Infraestructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ComplejoDeportivoId")
+                    b.Property<int?>("ComplejoDeportivoId")
                         .HasColumnType("int");
 
                     b.Property<int>("Duracion")
@@ -210,15 +210,21 @@ namespace Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NroComisarios")
+                    b.Property<int?>("NroComisarios")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<int>("NroParticipantes")
                         .HasColumnType("int");
 
+                    b.Property<int?>("UsuarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ComplejoDeportivoId");
+
+                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Eventos");
                 });
@@ -272,12 +278,7 @@ namespace Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Roles");
                 });
@@ -330,9 +331,6 @@ namespace Infraestructure.Migrations
                     b.Property<int>("Estado")
                         .HasColumnType("int");
 
-                    b.Property<int>("EventoId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("FechaNac")
                         .HasColumnType("datetime2");
 
@@ -340,13 +338,16 @@ namespace Infraestructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("RolId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ComplejoDeportivoId")
                         .IsUnique()
                         .HasFilter("[ComplejoDeportivoId] IS NOT NULL");
 
-                    b.HasIndex("EventoId");
+                    b.HasIndex("RolId");
 
                     b.ToTable("Usuarios");
                 });
@@ -425,11 +426,15 @@ namespace Infraestructure.Migrations
                 {
                     b.HasOne("Domain.Entities.ComplejoDeportivo", "ComplejoDeportivo")
                         .WithMany()
-                        .HasForeignKey("ComplejoDeportivoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ComplejoDeportivoId");
+
+                    b.HasOne("Domain.Entities.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId");
 
                     b.Navigation("ComplejoDeportivo");
+
+                    b.Navigation("Usuario");
                 });
 
             modelBuilder.Entity("Domain.Entities.Polideportivo", b =>
@@ -443,32 +448,19 @@ namespace Infraestructure.Migrations
                     b.Navigation("ComplejoDeportivo");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Rol", b =>
-                {
-                    b.HasOne("Domain.Entities.Usuario", "Usuario")
-                        .WithMany()
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Usuario");
-                });
-
             modelBuilder.Entity("Domain.Entities.Usuario", b =>
                 {
                     b.HasOne("Domain.Entities.ComplejoDeportivo", "ComplejoDeportivo")
                         .WithOne("Usuario")
                         .HasForeignKey("Domain.Entities.Usuario", "ComplejoDeportivoId");
 
-                    b.HasOne("Domain.Entities.Evento", "Evento")
+                    b.HasOne("Domain.Entities.Rol", "Rol")
                         .WithMany()
-                        .HasForeignKey("EventoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RolId");
 
                     b.Navigation("ComplejoDeportivo");
 
-                    b.Navigation("Evento");
+                    b.Navigation("Rol");
                 });
 
             modelBuilder.Entity("Domain.Entities.AreaDeportiva", b =>

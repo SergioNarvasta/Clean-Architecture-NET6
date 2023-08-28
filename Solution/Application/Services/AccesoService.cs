@@ -15,6 +15,9 @@ namespace Application.Services
         public async Task<Acceso> IniciarSesion(AccesoDto acceso) =>
             await _accesoRepository.IniciarSesion(acceso);
 
+        public async Task<Acceso> GetById(int accesoId) =>
+            await _accesoRepository.GetById(accesoId);
+
 
     }
 }

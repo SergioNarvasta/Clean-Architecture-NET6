@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7JN0Xpa1VlycD4HZ7U1rIIKbyvFsmZCp3YpQowQPwGQ=",
+  "Hash": "9NW/32aKcbkaBwwmaT4tau4zZlfIdFRPowV79hknjbc=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\js\\evento.js",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "js/evento.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\evento.js"
+    },
+    {
+      "Identity": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\js\\rol.js",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "js/rol.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\rol.js"
     },
     {
       "Identity": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\js\\site.js",

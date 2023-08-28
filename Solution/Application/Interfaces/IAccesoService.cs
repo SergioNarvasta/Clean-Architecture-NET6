@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Dto;
+using Domain.Entities;
 
 namespace Application.Interfaces
 {
     public interface IAccesoService
     {
-
+        Task<Acceso> GetById(int accesoId);
+        Task<Acceso> IniciarSesion(AccesoDto acceso);
     }
 }

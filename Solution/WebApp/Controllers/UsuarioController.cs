@@ -1,21 +1,35 @@
 ﻿using Application.Interfaces;
-using Azure;
+using Application.Services;
 using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+
 
 namespace WebApp.Controllers
 {
     public class UsuarioController : Controller
     {
         private readonly IUsuarioService _usuarioService;
-        public UsuarioController(IUsuarioService usuarioService) {
-          _usuarioService = usuarioService;
+        private readonly IRolService _rolService;
+        private readonly IAccesoService _accesoService;
+        public UsuarioController(IUsuarioService usuarioService, IRolService rolService, IAccesoService accesoService) {
+            _usuarioService = usuarioService;
+            _rolService = rolService;
+            _accesoService = accesoService;
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            ViewBag.Acceso = false;
+            var accesoId = HttpContext.Session.GetString("AccesoId");
+            if (accesoId != null)
+            {
+                var acceso = await _accesoService.GetById(int.Parse(accesoId));
+                ViewBag.Acceso = true;
+                ViewBag.NombreUsuario = string.Concat(acceso.UsuarioAsoc.Nombres, " ", acceso.UsuarioAsoc.Apellidos);
+            }
+            var rolList = await _rolService.GetList();
+            ViewBag.RolList = rolList.Where(x => x.Estado == Utils.Enums.Estados.Active).ToList();
             return View();
         }
 

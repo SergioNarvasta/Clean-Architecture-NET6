@@ -11,14 +11,23 @@ namespace WebApp.Controllers
         public AccesoController(IAccesoService accesoService) {
           _accesoService = accesoService;
         }
-        public IActionResult Index()
+
+        [HttpPost]
+        public async Task<JsonResult> IniciarSesion(AccesoDto acceso)
         {
-            return View();
+           var response = await _accesoService.IniciarSesion(acceso);
+            if(response != null) {
+                HttpContext.Session.SetString("AccesoId", response.Id.ToString());
+            }
+            return Json(response);
         }
 
-        /*[HttpPost]
-        public async Task<JsonResult> IniciarSesion(AccesoDto acceso) {
-           
-        }*/
+        [HttpPost]
+        public ActionResult CerrarSesion()
+        {
+            HttpContext.Session.Remove("AccesoId");
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

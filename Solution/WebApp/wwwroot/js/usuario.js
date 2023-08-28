@@ -58,7 +58,8 @@ function getList() {
 }
 
 function createEvent() {
-    
+    ClearModal();
+
    $.ajax({
        type: 'POST',
        url: "/Usuario/Create",
@@ -67,6 +68,7 @@ function createEvent() {
            Apellidos: $('#Apellidos').val(),
            DNI: $('#DNI').val(),
            FechaNac: $('#FechaNac').val(),
+           RolId: parseInt($('#cboRolList').val()),
            Estado: parseInt($('#cboEstado').val())
        },
        success: function (response) {
@@ -171,4 +173,12 @@ function deleteEvent(id) {
 function showDeleteEventModal(id) {
     $("#deleteEventModal #DeleteId").val(id);
     $("#deleteEventModal").modal('show');
+}
+function ClearModal() {
+    $("#createEventModal #UsuarioId").val("");
+    $('#createEventModal #Nombres').val("");
+    $('#createEventModal #Apellidos').val("");
+    $('#createEventModal #DNI').val("");
+    $('#createEventModal #FechaNac').val("");
+    $('#createEventModal #cboEstado').val("");
 }

@@ -1,4 +1,8 @@
-﻿
+﻿@using  Domain.Entities;
+@{
+    var rolList = ViewBag.RolList as List<Rol>;
+}
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <div class="row">
@@ -10,6 +14,7 @@
                         <div class="d-flex flex-wrap gap-2">
                             <h4 class="card-title mt-2 me-5"><b>Gestion de Usuarios</b> </h4>
                             <a id="btnShowCreateModal" style="height:40px" class="btn btn-outline-primary btn-md"><i class="fas fa-plus"></i> Agregar usuario</a>
+                            <a id="btnShowCreateRolModal" style="height:40px" class="btn btn-outline-success btn-md"> Gestionar Roles</a>
                         </div>
                     </div>
                 </div>
@@ -21,7 +26,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <table class="table table-bordered dt-responsive nowrap w-100" id="usuariosTable">
+                <table class="table table-bordered dt-responsive nowrap w-100" >
                     <thead>
                         <tr>
                             <th>Nombres</th>
@@ -32,6 +37,9 @@
                             <th></th>
                         </tr>
                     </thead>
+                    <tbody id="usuariosTable">
+
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -42,7 +50,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title titleModalRate"></h5>
+                <h5 class="modal-title titleModal"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -68,6 +76,19 @@
                                 <label style="font-weight: bold; width: 140px">FechaNac:</label>
                                 <input type="date" class="form-control" id="FechaNac" />
                             </div><br />
+                            @if (rolList != null)
+                            {
+                                <div class="d-flex flex-row">
+                                    <label style="font-weight: bold; width: 140px">Rol:</label>
+                                    <select class="form-select form-select-sm required" id="cboRolList">
+                                        @foreach (var item in rolList)
+                                        {
+                                            <option value="@item.Id">@item.Nombre</option>
+                                        }
+                                    </select>
+                                </div> <br />
+                            
+                            }
                             <div class="d-flex flex-row">
                                 <label style="font-weight: bold; width: 140px">Estado:</label>
                                 <select class="form-select form-select-sm required" id="cboEstado">
@@ -100,7 +121,7 @@
             <div class="modal-body">
                 <input type="text" id="DeleteId" hidden />
                 <div class="mt-2">
-                    <label>¿ Estas seguro de eliminar el usuario seleccionada ? </label><br />
+                    <label>¿ Estas seguro de eliminar el usuario seleccionado ? </label><br />
                 </div>
             </div>
             <div class="modal-footer">
@@ -111,7 +132,67 @@
     </div>
 </div>
 
+<div class="modal fade modal-static" id="createRolEventModal" tabindex="-1" role="dialog" aria-labelledby="createRolEventModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title titleModal"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div> 
+                    <div>
+                        <div>
+                            <div class="d-flex flex-row">
+                                <label style="font-weight:bold; width:140px">Nombre:</label>
+                                <input type="text" class="form-control required" id="RolNombres" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">Estado:</label>
+                                <select class="form-select form-select-sm required" id="cboRolEstado">
+                                    <option value="1">Activo</option>
+                                    <option value="0">Inactivo</option>
+                                </select>
+                            </div><br />
+                            
+                        </div>
+                    </div><br />
+                    <div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <table class="table table-bordered dt-responsive nowrap w-100" >
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Estado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="rolTable">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p id="messageError" style="color:red" hidden></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-md" data-bs-dismiss="modal">Volver</button>
+                <button type="button" class="btn btn-primary btn-md" id="btnCreateRolEvent">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="~/js/usuario.js"></script>
+<script src="~/js/rol.js"></script>
 

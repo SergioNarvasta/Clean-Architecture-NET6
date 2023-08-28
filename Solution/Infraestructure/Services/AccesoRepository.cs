@@ -16,7 +16,15 @@ namespace Infraestructure.Services
 
         public async Task<Acceso> IniciarSesion(AccesoDto acceso) => 
             await _appDbContext.Accesos
+                .Include(a => a.UsuarioAsoc)
                 .Where(x => x.Usuario == acceso.Usuario && x.Clave == acceso.Clave)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+
+        public async Task<Acceso> GetById(int accesoId) =>
+            await _appDbContext.Accesos
+                .Include(a => a.UsuarioAsoc)
+                .Where(x => x.Id == accesoId)
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
 

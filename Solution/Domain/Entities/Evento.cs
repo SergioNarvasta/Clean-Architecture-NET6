@@ -20,13 +20,17 @@ namespace Domain.Entities
         [Required]
         public int NroParticipantes { get; set; }
         [Required]
-        public int NroComisarios { get; set; }
+        public int? NroComisarios { get; set; }
         [DefaultValue(Estados.Active)]
         public Estados Estado { get; set; }
 
-        public int ComplejoDeportivoId { get; set; }
+        public int? ComplejoDeportivoId { get; set; }
         [ForeignKey("ComplejoDeportivoId")]
-        public ComplejoDeportivo ComplejoDeportivo { get; set; }
+        public ComplejoDeportivo? ComplejoDeportivo { get; set; }
+
+        [ForeignKey("UsuarioId")]
+        public int? UsuarioId { get; set; }
+        public Usuario? Usuario { get; set; }
     }
 }
 

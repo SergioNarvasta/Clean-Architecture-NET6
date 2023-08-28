@@ -16,9 +16,5 @@ namespace Domain.Entities
         [DefaultValue(Estados.Active)]
         public Estados Estado { get; set; }
 
-        [Required]
-        public int UsuarioId { get; set; }
-        [ForeignKey("UsuarioId")]
-        public Usuario? Usuario { get; set; }
     }
 }

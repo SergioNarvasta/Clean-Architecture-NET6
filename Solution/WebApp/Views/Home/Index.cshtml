@@ -6,3 +6,36 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<div class="modal fade modal-static" id="loginEventModal" tabindex="-1" role="dialog" aria-labelledby="loginEventModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title titleModalRate">Inicio de Sesion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div>
+                        <div>
+                            <div class="d-flex flex-row">
+                                <label style="font-weight:bold; width:140px">Usuario:</label>
+                                <input type="text" class="form-control" id="txtUsuarioLogin" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">Contraseña:</label>
+                                <input type="password" class="form-control" id="txtContraseñaLogin" />
+                            </div><br />
+                        </div>
+                    </div><br />
+
+                </div>
+                <p id="messageError" style="color:red" hidden></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-md" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary btn-md" id="btnLoginEvent">Ingresar</button>
+            </div>
+        </div>
+    </div>
+</div>

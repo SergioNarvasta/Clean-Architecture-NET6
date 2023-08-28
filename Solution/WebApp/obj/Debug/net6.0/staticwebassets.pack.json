@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\js\\evento.js",
+      "PackagePath": "staticwebassets\\js\\evento.js"
+    },
+    {
+      "Id": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\js\\rol.js",
+      "PackagePath": "staticwebassets\\js\\rol.js"
+    },
+    {
       "Id": "F:\\3.PROYECTOS\\EvTecnica\\Solution\\WebApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

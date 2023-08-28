@@ -6,7 +6,7 @@ namespace Infraestructure.Data
     public class AppDbContext : DbContext
     {
         /*
-         Add-Migration -Context Infraestructure.Data.AppDbContext -name init_01
+         Add-Migration -Context Infraestructure.Data.AppDbContext -name init_02
          Update-Database -Verbose -Context AppDbContext
          
          Remove-Migration -Context AppDbContext
