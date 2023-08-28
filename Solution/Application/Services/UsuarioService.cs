@@ -22,7 +22,7 @@ namespace Application.Services
            return await _usuarioRepository.GetById(usuarioId);
         }
 
-        public async Task<bool> Create(Usuario usuario)
+        public async Task<Usuario> Create(Usuario usuario)
         {
             return await _usuarioRepository.Create(usuario);
         }

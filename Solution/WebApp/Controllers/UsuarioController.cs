@@ -50,7 +50,7 @@ namespace WebApp.Controllers
         public async Task<JsonResult> Create(Usuario usuario)
         {
             var response =  await _usuarioService.Create(usuario);
-            return Json(response);
+            return Json(response != null);
         }
 
         [HttpPost]

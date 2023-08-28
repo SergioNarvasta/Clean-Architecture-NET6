@@ -5,7 +5,7 @@ namespace Application.Interfaces
 {
     public interface IUsuarioService
     {
-        Task<bool> Create(Usuario usuario);
+        Task<Usuario> Create(Usuario usuario);
         Task<bool> Delete(int usuarioId);
         Task<Usuario> GetById(int usuarioId);
         Task<List<Usuario>> GetList();

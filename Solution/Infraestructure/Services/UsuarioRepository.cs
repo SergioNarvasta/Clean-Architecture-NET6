@@ -28,20 +28,21 @@ namespace Infraestructure.Services
                  .FirstAsync();
         }
 
-        public async Task<bool> Create(Usuario usuario)
+        public async Task<Usuario> Create(Usuario usuario)
         {
             try
             {
                 await _appDbContext.Usuarios.AddAsync(usuario);
                 await _appDbContext.SaveChangesAsync();
-                return true; 
+                return usuario; 
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error : {ex.Message}");
-                return false;
+                return null;
             }
         }
+        
 
         public async Task<bool> Update(Usuario usuario)
         {

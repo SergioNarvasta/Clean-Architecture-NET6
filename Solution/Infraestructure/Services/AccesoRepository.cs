@@ -28,6 +28,22 @@ namespace Infraestructure.Services
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
 
+        public async Task<bool> Create(Acceso acceso)
+        {
+            try
+            {
+                await _appDbContext.Accesos.AddAsync(acceso);
+                await _appDbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error : {ex.Message}");
+                return false;
+            }
+        }
+
+
 
     }
 }

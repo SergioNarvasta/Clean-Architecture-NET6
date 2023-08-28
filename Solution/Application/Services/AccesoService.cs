@@ -18,6 +18,8 @@ namespace Application.Services
         public async Task<Acceso> GetById(int accesoId) =>
             await _accesoRepository.GetById(accesoId);
 
+        public async Task<bool> Create(Acceso acceso) =>
+            await _accesoRepository.Create(acceso);
 
     }
 }

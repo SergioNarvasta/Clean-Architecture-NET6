@@ -1,10 +1,10 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+   
 </div>
 
 <div class="modal fade modal-static" id="loginEventModal" tabindex="-1" role="dialog" aria-labelledby="loginEventModal" aria-hidden="true">
@@ -33,9 +33,63 @@
                 <p id="messageError" style="color:red" hidden></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-md" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success btn-md" id="btnRegistroEvent">Registrar</button>
                 <button type="button" class="btn btn-primary btn-md" id="btnLoginEvent">Ingresar</button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade modal-static" id="createSesionEventModal" tabindex="-1" role="dialog" aria-labelledby="createSesionEventModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title titleModal"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <input type="text" id="UsuarioId" hidden />
+                            </div>
+                            <div class="d-flex flex-row">
+                                <label style="font-weight:bold; width:140px">Nombres:</label>
+                                <input type="text" class="form-control required" id="RegNombres" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">Apellidos:</label>
+                                <input type="text" class="required form-control" id="RegApellidos" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">DNI:</label>
+                                <input type="text" class="form-control" id="RegDNI" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">FechaNac:</label>
+                                <input type="date" class="form-control" id="RegFechaNac" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight:bold; width:140px">Usuario:</label>
+                                <input type="text" class="form-control" id="RegUsuarioName" />
+                            </div><br />
+                            <div class="d-flex flex-row">
+                                <label style="font-weight: bold; width: 140px">Contraseña:</label>
+                                <input type="password" class="form-control" id="RegContraseña" />
+                            </div><br />
+                        </div>
+                    </div><br />
+
+                </div>
+                <p id="messageError" style="color:red" hidden></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-md" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary btn-md" id="btnCreateSesionEvent">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -1,5 +1,40 @@
 ﻿$("#btnShowModalLogin").on('click', function () {
+    $('#txtContraseñaLogin').val("");
     $("#loginEventModal").modal('show');
+});
+
+$("#btnRegistroEvent").on('click', function () {
+    $("#loginEventModal").modal('hide');
+    $("#createSesionEventModal").modal('show');
+});
+
+$("#btnCreateSesionEvent").on('click', function () {
+   
+    $.ajax({
+        type: 'POST',
+        url: "/Acceso/CrearSesion",
+        data: {
+            Nombres: $('#RegNombres').val(),
+            Apellidos: $('#RegApellidos').val(),
+            DNI: ($('#RegDNI').val()),
+            FechaNac: ($('#RegFechaNac').val()),
+            Usuario: ($('#RegUsuarioName').val()),
+            Clave: ($('#RegContraseña').val()),
+            Estado: 1
+        },
+        success: function (response) {
+            if (response) {
+                toastr.success("Se registro con exito!");
+              
+                $("#createSesionEventModal").modal('hide');
+            } else {
+                toastr.error("Ocurrio un error!");
+            }
+        },
+        error: function (xhr, status, error) {
+            toastr.error("Ocurrio un error!");
+        }
+    });
 });
 
 $("#btnLoginEvent").on('click', function () {
@@ -16,7 +51,7 @@ $("#btnLoginEvent").on('click', function () {
                 Clave: clave
             },
             success: function (response) {
-                console.log(response);
+           
                 if (response != null) {
                     window.location.reload();
                 } else {
@@ -39,13 +74,14 @@ $("#btnLogout").on('click', function () {
        type: 'POST',
        url: "/Acceso/CerrarSesion",
        success: function (response) {     
-           window.location.reload();
+           window.location.href = "/";
        },
        error: function (xhr, status, error) {
            toastr.error("Ocurrio un error!");
        }
    });
 });
+
 
 function mostrarError(mensaje) {
     $("#messageError").text(mensaje);
