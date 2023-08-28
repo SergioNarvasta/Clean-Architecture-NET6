@@ -7,6 +7,7 @@ $(document).ready(function () {
         $("#createEventModal .titleModal").text('Nuevo Usuario');
         $("#createEventModal #btnCreateEvent").show();
         $("#createEventModal #btnUpdateEvent").hide();
+        ClearModal();
         $("#createEventModal").modal('show');
     });
     $("#btnCreateEvent").on('click', function () {
@@ -58,7 +59,7 @@ function getList() {
 }
 
 function createEvent() {
-    ClearModal();
+    
 
    $.ajax({
        type: 'POST',
